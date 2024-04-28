@@ -91,11 +91,17 @@ Our dataset consists of a subset of approxiamtely 8,500 tweets from a larger dat
 
 ## Pre-Processing
 In order to train our models and conduct analysis on our data we conducted the following pre-processing steps:
+
 1. Example
+
    a. Reason why we did this step
-3. Example
+   
+2. Example
+
    a. Reason why
-5. Example
+
+3. Example
+   
    a. Reason why
 
 ## Hyperparameters
