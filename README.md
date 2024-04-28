@@ -21,8 +21,18 @@ In the randomForest.ipynb file is our final RF model that we implemented.
 In our main.py file is the EDA work that we did. 
 
 ## Dataset
+Our dataset consists of a subset of approxiamtely 8,500 tweets from a larger dataset linked here: https://www.kaggle.com/datasets/deffro/the-climate-change-twitter-dataset. The hydrated subset of data we used can be found here: (INSERT LINK TO OUR DATASET). Our team leveraged the following columns for our project work:
+1. Example
+2. Example
+3. Example
+4. Example
+5. Example
+6. Example
+7. Example
 
 ## Coding Environment
+1. VSCode
+2. Jupyter Notebook
 
 ## Library Overview
 1. Pandas
@@ -80,6 +90,13 @@ In our main.py file is the EDA work that we did.
 
 
 ## Pre-Processing
+In order to train our models and conduct analysis on our data we conducted the following pre-processing steps:
+1. Example
+   a. Reason why we did this step
+3. Example
+   a. Reason why
+5. Example
+   a. Reason why
 
 ## Hyperparameters
 
