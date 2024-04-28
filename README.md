@@ -33,34 +33,33 @@ In our main.py file is the EDA work that we did.
   Specific to our project, our team utilized Pandas for our EDA and Dataset generation. We decided to use this library because all team members were at least somewhat familiar with the documentation, and due to its widespread popularity.
 2. Scikit learn
   Scikit-Learn is another very popular library primarily used for machine learning in Python. Its features include:
-a. Classification
-b. Clustering
-c. Regression
-d. Dimensionality reduction
-Our team decided to use Scikit-Learn because of its thorough documentation and previous experience with the library. It allowed us to conduct ….(Need Example)…. Analysis of our initial data and build powerful conclusions with notable efficiency.
+    a. Classification
+    b. Clustering
+    c. Regression
+    d. Dimensionality reduction
+  Our team decided to use Scikit-Learn because of its thorough documentation and previous experience with the library. It allowed us to conduct ….(Need Example)…. Analysis of our initial data and build powerful conclusions with notable efficiency.
 
-
-3.       Tensorflow
-TensorFlow is an open-source library built for working with deep neural networks, or more complex machine learning algorithms. It is compatible with Javascript, Python, and C++. The library has the following key features:
-a.       Responsive Construct
-b.       Parallel Neural Network Training
-c.       Feature Columns
-d.       Statistical Distributions
-TensorFlow was perfect for our project due to its powerful machine-learning tools as well as its large community which we were able to leverage when implementing it into our code. In particular, we were able to complete …(Need Example)… Analysis by using …(following tool)….
-4.       Keras
-Keras is another open-source machine-learning library built specifically for Python and serves as a high-level neural network interface that runs on top of TensorFlow. These two libraries are often used in conjunction with one another to provide powerful deep-learning capabilities. The key features of this library are as follows:
-a.       Convolutional and Recurrent Neural Network Support
-b.       Normalization
-c.       Pooling
-d.       Allows users to produce deep models on smartphones
-Much as described above, the primary reason our team decided to use Keras was to support the use of TensorFlow and increase the overall efficiency of our processing methods.
+3. Tensorflow
+  TensorFlow is an open-source library built for working with deep neural networks, or more complex machine learning algorithms. It is compatible with Javascript, Python, and C++. The library has the following key features:
+    a. Responsive Construct
+    b. Parallel Neural Network Training
+    c. Feature Columns
+    d. Statistical Distributions
+  TensorFlow was perfect for our project due to its powerful machine-learning tools as well as its large community which we were able to leverage when implementing it into our code. In particular, we were able to complete …(Need Example)… Analysis by using …(following tool)….
+4. Keras
+  Keras is another open-source machine-learning library built specifically for Python and serves as a high-level neural network interface that runs on top of TensorFlow. These two libraries are often used in conjunction with one another to provide powerful deep-learning capabilities. The key features of this library are as follows:
+    a. Convolutional and Recurrent Neural Network Support
+    b. Normalization
+    c. Pooling
+    d. Allows users to produce deep models on smartphones
+  Much as described above, the primary reason our team decided to use Keras was to support the use of TensorFlow and increase the overall efficiency of our processing methods.
  
-Open Cage
-Open Cage is a simple, yet, powerful Geocoder that allows developers to incorporate location data into their analysis all around the globe. The library uses an API that combines multiple geocoding systems in the background, selecting only the best results from multiple data sources and algorithms so that users don’t have to. Some key features include:
-a.       Global coverage of location data
-b.       Reverse Geocoding
-c.       Aggregation of multiple data sources
-A separate library that our team considered was Geopy, however, as we began to implement this library into our analysis we quickly discovered that we would have better luck switching to Open Cage. Due to Open Cage’s (BAXTER NEED HELP) we found this library to be much better suited to our needs.
+5. Open Cage
+  Open Cage is a simple, yet, powerful Geocoder that allows developers to incorporate location data into their analysis all around the globe. The library uses an API that combines multiple geocoding systems in the background, selecting only the best results from multiple data sources and algorithms so that users don’t have to. Some key features include:
+    a. Global coverage of location data
+    b. Reverse Geocoding
+    c. Aggregation of multiple data sources
+  A separate library that our team considered was Geopy, however, as we began to implement this library into our analysis we quickly discovered that we would have better luck switching to Open Cage. Due to Open Cage’s (BAXTER NEED HELP) we found this library to be much better suited to our needs.
 
 
 ## Pre-Processing
