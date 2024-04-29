@@ -92,7 +92,7 @@ Our dataset consists of a subset of approxiamtely 8,500 tweets from a larger dat
 ## Pre-Processing
 In order to train our models and conduct analysis on our data we conducted the following pre-processing steps:
 
-1. Example
+1. Hydration
 
    a. Reason why we did this step
    
