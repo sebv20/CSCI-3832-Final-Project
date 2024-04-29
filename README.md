@@ -109,5 +109,15 @@ In order to train our models and conduct analysis on our data we conducted the f
 ## Additional Details
 
 ## Results Summary
+We want to break down our results into two sections. The first section we will cover our model performance and second section will be our experiment results.
+
+1. Model Performance
+
+  a. BERT: Our BERT model ran for a total of 4 epochs with a run time of just under 4 hours. The final validation set accuracy came out to 87.7%
+  b. Random Forest: Our Random Forest model consisted of 100 estimators with a run time of under one minute. The final F1 score acheived by the model came out to 82.01%
+
+2. Experiment Results
+
+  Our team failed to reject the null hypothesis, finding a p-value of (BLANK) indicating that climate change sentiment on twitter is uniform across different geographies. Some of the interesting findings were (BLANK).
 
 
