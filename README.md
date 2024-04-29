@@ -114,7 +114,9 @@ We want to break down our results into two sections. The first section we will c
 1. Model Performance
 
   a. BERT: Our BERT model ran for a total of 4 epochs with a run time of just under 4 hours. The final validation set accuracy came out to 87.7%
+  
   b. Random Forest: Our Random Forest model consisted of 100 estimators with a run time of under one minute. The final F1 score acheived by the model came out to 82.01%
+  
 
 2. Experiment Results
 
