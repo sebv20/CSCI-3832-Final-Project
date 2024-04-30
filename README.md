@@ -17,18 +17,22 @@ Test Statistic: Deviation from average sentiment
 Our repo contains various files that we used for testing and implementing our code. 
 
 In the bert.ipynb file is our final BERT model that we trained. 
-In the randomForest.ipynb file is our final RF model that we implemented. 
+In the randomForest_V2_Final.ipynb file is our final RF model that we implemented. 
 In our main.py file is the EDA work that we did. 
 
 ## Dataset
 Our dataset consists of a subset of approxiamtely 8,500 tweets from a larger dataset linked here: https://www.kaggle.com/datasets/deffro/the-climate-change-twitter-dataset. The hydrated subset of data we used can be found here: (INSERT LINK TO OUR DATASET). Our team leveraged the following columns for our project work:
-1. Example
-2. Example
-3. Example
-4. Example
-5. Example
-6. Example
-7. Example
+1. Topic
+2. Sentiment
+3. Stance
+4. Gender
+5. Temp_Avg
+6. Agressiveness
+7. Lattitude
+8. Longitude
+9. Text (Vectorized)
+10. Region
+
 
 ## Coding Environment
 1. VSCode
@@ -86,7 +90,7 @@ Our dataset consists of a subset of approxiamtely 8,500 tweets from a larger dat
     b. Reverse Geocoding
     c. Aggregation of multiple data sources
     
-  A separate library that our team considered was Geopy, however, as we began to implement this library into our analysis we quickly discovered that we would have better luck switching to Open Cage. Due to Open Cage’s (BAXTER NEED HELP) we found this library to be much better suited to our needs.
+  A separate library that our team considered was Geopy, however, as we began to implement this library into our analysis we quickly discovered that GeoPy is heavily outdated and had to long of a runtime for our use. Therefore we switched to a newer geocoder that gave us 2000 free API calls a day and progressively ran it until we got all our location based data turned into JSON Full Address.
 
 
 ## Pre-Processing
@@ -94,15 +98,20 @@ In order to train our models and conduct analysis on our data we conducted the f
 
 1. Hydration
 
-   a. Reason why we did this step
+   a. In order to gain access to the text portion of the tweetw e had to implement a webs craper to physically visit each tweet in our data set, from there we could extract the raw text and input it into our data
    
-2. Example
+2. Outlier and Null Removal
 
-   a. Reason why
+   a. We did this step to reduce noise that could potentially introduce bias or errors leading to our model being over/underfit. We found that are data set was mostly complete, with no outliers and few NaN variables
 
-3. Example
+3. Aggregation of data set into subsets using GeoCoder
+   a. We used BirdCages free testing geocoder API to pull the full JSON address using lattitude and longitude, from there we built a function to parse the address and create the columns: Continent, Country, City.
+  
+   b. From there we were able to see that majority of our data points lie in North America and Europe so we created the Merged Region column by creating list of states within our three subsets and aggregating accordingly.
+
+4. Visualization of Mean Sentiment Scores by Region
    
-   a. Reason why
+   a. In order to get an idea of how sentiment relates to countries, continents and regions we created visuals to look at the distribution of average sentiment using the SNS library. We found that most belivers in climate change correlate with negative sentiment.
 
 ## Hyperparameters
 
@@ -116,6 +125,8 @@ We want to break down our results into two sections. The first section we will c
   a. BERT: Our BERT model ran for a total of 4 epochs with a run time of just under 4 hours. The final validation set accuracy came out to 87.7%
   
   b. Random Forest: Our Random Forest model consisted of 100 estimators with a run time of under one minute. The final F1 score acheived by the model came out to 82.01%
+
+  c. Our efforts to test our model with unseen data were unsuccessful due to the itidf vectorization process creating different feature variables.
   
 
 2. Experiment Results
