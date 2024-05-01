@@ -84,7 +84,7 @@ Our dataset consists of a subset of approxiamtely 8,500 tweets from a larger dat
  
 5. Open Cage
 
-  Open Cage is a simple, yet, powerful Geocoder that allows developers to incorporate location data into their analysis all around the globe. The library uses an API that combines multiple geocoding systems in the background, selecting only the best results from multiple data sources and algorithms so that users don’t have to. Some key features include:
+  Open Cage is a simple, yet, powerful Geocoder that allows developers to incorporate location data into their analysis all around the globe. The library uses an API that combines multiple geocoding systems in the background, selecting only the best results from multiple data sources and algorithms so that users don't have to. Some key features include:
   
     a. Global coverage of location data
     b. Reverse Geocoding
@@ -92,24 +92,42 @@ Our dataset consists of a subset of approxiamtely 8,500 tweets from a larger dat
     
   A separate library that our team considered was Geopy, however, as we began to implement this library into our analysis we quickly discovered that GeoPy is heavily outdated and had to long of a runtime for our use. Therefore we switched to a newer geocoder that gave us 2000 free API calls a day and progressively ran it until we got all our location based data turned into JSON Full Address.
 
+6. Selenium
+
+  The Selenium python package allows python to interact directly with web drivers installed on the local enviroment and automate web interactions. Some of its key features include:
+
+  a. Compatability with several different web drviers (chrome, firefox, yahoo, etc.)
+  b. Simple implementation - not reliant on other packages
+  c. Contains functions used to scrape raw html from fetched webpages
+
+  In combination with the Selenium package, we used the chrome web driver which was downloaded from: "https://chromedriver.chromium.org/downloads". Our scraping script is relatively slow (a few hundred tweets per hour), but it is reliable and succesfully get around the twitter dev API pay wall. 
 
 ## Pre-Processing
 In order to train our models and conduct analysis on our data we conducted the following pre-processing steps:
 
-1. Hydration
 
-   a. In order to gain access to the text portion of the tweetw e had to implement a webs craper to physically visit each tweet in our data set, from there we could extract the raw text and input it into our data
+1. Removal of Non-Geotagged Entries
+
+  a. In the raw dataset from Kaggle, roughly half of the entries do not have information in regards to geotagging. Due to the nature of our project, we found it easier to just remove those entries all together since we would still be left with hundreds of thousands of potential entries.
+
+2. Hydration
+
+   a. Our original dataset does not contain the raw text portion of each tweet. However, it does contain the tweet id.
+
+   b. We first added a new column, "text" to our dataset in order to store retrieved raw text from twitter.
+
+   c. Then we implemented a web to fetch the raw text of a tweet based on its id. If the tweet was unreachable either by rejection from the twitter API or the tweet no longer existed, the text column was marked as Null.
    
-2. Outlier and Null Removal
+3. Outlier and Null Removal
 
    a. We did this step to reduce noise that could potentially introduce bias or errors leading to our model being over/underfit. We found that are data set was mostly complete, with no outliers and few NaN variables
 
-3. Aggregation of data set into subsets using GeoCoder
+4. Aggregation of data set into subsets using GeoCoder
    a. We used BirdCages free testing geocoder API to pull the full JSON address using lattitude and longitude, from there we built a function to parse the address and create the columns: Continent, Country, City.
   
    b. From there we were able to see that majority of our data points lie in North America and Europe so we created the Merged Region column by creating list of states within our three subsets and aggregating accordingly.
 
-4. Visualization of Mean Sentiment Scores by Region
+5. Visualization of Mean Sentiment Scores by Region
    
    a. In order to get an idea of how sentiment relates to countries, continents and regions we created visuals to look at the distribution of average sentiment using the SNS library. We found that most belivers in climate change correlate with negative sentiment.
 
