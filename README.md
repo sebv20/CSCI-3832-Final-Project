@@ -152,3 +152,22 @@ We want to break down our results into two sections. The first section we will c
   Our team failed to reject the null hypothesis, finding a p-value of (BLANK) indicating that climate change sentiment on twitter is uniform across different geographies. Some of the interesting findings were (BLANK).
 
 
+## Reproducing Results
+
+To reproduce our results you will need to have an environment set up to run .ipynb files. You will need python downloaded as well as the packages that we listed above. You may have to "pip install" additional packages as well if you do not have them downloaded. 
+
+
+Our repo is broken up into two sections: data and src. All of the data we used is in the data folder. In our src folder is all of our source code. 
+
+
+When you go in the src folder it is split into our hydration scripts folder, main eda, and models folder. 
+
+
+The twitter scraping can be reproduced by running the "twitter scraping.ipynb" file. 
+
+
+In our eda folder we have a few files, "full_df_eda.ipynb" contains the most comprehensive version of our data analysis that we completed. You can run this file to reproduce the results as well.
+
+
+In the models folder we have our BERT and RF models. The final BERT model that we ran is in "bert_v2_final.ipynb". If attempting to reproduce, be aware that it will take several hours and be computationally expensive. The final RF model is in "randomForest_v2_final.ipynb". 
+
