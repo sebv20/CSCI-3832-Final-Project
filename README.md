@@ -131,10 +131,6 @@ In order to train our models and conduct analysis on our data we conducted the f
    
    a. In order to get an idea of how sentiment relates to countries, continents and regions we created visuals to look at the distribution of average sentiment using the SNS library. We found that most belivers in climate change correlate with negative sentiment.
 
-## Hyperparameters
-
-## Additional Details
-
 ## Results Summary
 We want to break down our results into two sections. The first section we will cover our model performance and second section will be our experiment results.
 
