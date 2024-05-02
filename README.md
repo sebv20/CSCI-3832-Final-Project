@@ -132,7 +132,6 @@ In order to train our models and conduct analysis on our data we conducted the f
    a. In order to get an idea of how sentiment relates to countries, continents and regions we created visuals to look at the distribution of average sentiment using the SNS library. We found that most belivers in climate change correlate with negative sentiment.
 
 ## Results Summary
-We want to break down our results into two sections. The first section we will cover our model performance and second section will be our experiment results.
 
 1. Model Performance
 
@@ -142,12 +141,6 @@ We want to break down our results into two sections. The first section we will c
 
   c. Our efforts to test our model with unseen data were unsuccessful due to the itidf vectorization process creating different feature variables.
   
-
-2. Experiment Results
-
-  Our team failed to reject the null hypothesis, finding a p-value of (BLANK) indicating that climate change sentiment on twitter is uniform across different geographies. Some of the interesting findings were (BLANK).
-
-
 ## Reproducing Results
 
 To reproduce our results you will need to have an environment set up to run .ipynb files. You will need python downloaded as well as the packages that we listed above. You may have to "pip install" additional packages as well if you do not have them downloaded. 
